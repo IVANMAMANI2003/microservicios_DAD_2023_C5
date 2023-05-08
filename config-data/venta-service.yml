@@ -1,12 +1,12 @@
 server:
     port: 8083
 springdoc:
-    api-doc:
-        enabled: true
-    swagger-ui:
-        enabled: true
-        path: /doc/swagger-ui.html
-        
+  api-doc:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /doc/swagger-ui.html
+
 spring:
     jpa:
         hibernate.ddl-auto: update
@@ -17,3 +17,8 @@ spring:
         url: jdbc:mysql://localhost:3306/venta
         username: root
         password:
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8090/eureka}
